@@ -9,7 +9,7 @@ export async function fetchAllPlacements() {
   .from('my_zodiac_chart')
   .select('*');
 
-	return data;
+	return data.body;
 }
 
 export async function fetchOnePlacement(id) {
@@ -19,5 +19,5 @@ export async function fetchOnePlacement(id) {
 	.match({ id: id })
   .single();
 
-	return data;
+	return data.body;
 }
