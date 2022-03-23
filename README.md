@@ -35,18 +35,18 @@ Additional considerations:
   B. Div for detail page info
 3.) Events -
   1.) On load list page:
-    A. send request for all ice cream
+    A. send request for all placements
   B. wait for response
   C. once response shows up render and append
   2.) On load detail page:
-    A. send request for particular ice cream
+    A. send request for particular placement
   B. wait for response
   C. once response shows up render and append
 4.) Create fetch-utils.js & copy and paste code from supabase.
 5.) Copy & paste CDN into html.
 6.) Write async functions in fetch-utils.js to fetch data for list and for detail.
-7.) Import fetch function into app.js.
-8.) window.addEventListener('load') event, I fetch all ice creams, then loop, render, append.
+7.) Import fetchALL function into app.js.
+8.) window.addEventListener('load') event, I fetch all placements, then loop, render, append.
 9.) Make new folder with a new html and new js for my detail page
   - in the detail page js file:
    A. Hard-code specific id at first
