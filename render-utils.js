@@ -26,10 +26,10 @@ export function renderPlacementDetail(placement) {
 
     myChartEl.classList.add('detail');
 
-    placementEl.textContent = placement.Placement;
-    signEl.textContent = placement.Sign;
+    placementEl.textContent = `Placement: ${placement.Placement}`;
+    signEl.textContent = `Sign: ${placement.Sign}`;
     imgEl.src = placement.Image;
-    rulingPlanetEl.textContent = placement.Ruling_Planet;
+    rulingPlanetEl.textContent = `Ruling Planet: ${placement.Ruling_Planet}`;
     qualityElementEl.textContent = placement.Quality_And_Element;
 
     for (let attribute of placement.Attributes){
