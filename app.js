@@ -5,12 +5,12 @@ const placementListEl = document.querySelector('.placement-list');
 
 
 window.addEventListener('load', async () => {
-  const placements = await fetchAllPlacements();
+    const placements = await fetchAllPlacements();
 
-  for (let placement of placements) {
-      const placementEl = renderAllPlacements(placement);
+    for (let placement of placements) {
+        const placementEl = renderAllPlacements(placement);
 
-      placementListEl.append(placementEl);
-  }
+        placementListEl.append(placementEl);
+    }
 });
 

@@ -5,19 +5,19 @@ const SUPABASE_URL = "https://lznsceqpknsnvyvrmexq.supabase.co" //eslint-disable
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY); //eslint-disable-line
 
 export async function fetchAllPlacements() {
-	let data = await client
-  .from('my_zodiac_chart')
-  .select('*');
+    let data = await client
+        .from('my_zodiac_chart')
+        .select('*');
 
-	return data.body;
+    return data.body;
 }
 
 export async function fetchOnePlacement(id) {
-	let data = await client
-  .from('my_zodiac_chart')
-  .select('*')
-	.match({ id: id })
-  .single();
+    let data = await client
+        .from('my_zodiac_chart')
+        .select('*')
+        .match({ id: id })
+        .single();
 
-	return data.body;
+    return data.body;
 }
