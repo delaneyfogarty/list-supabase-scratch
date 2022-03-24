@@ -30,9 +30,9 @@ export function renderPlacementDetail(placement) {
     signEl.textContent = `Sign: ${placement.Sign}`;
     imgEl.src = placement.Image;
     rulingPlanetEl.textContent = `Ruling Planet: ${placement.Ruling_Planet}`;
-    qualityElementEl.textContent = placement.Quality_And_Element;
+    qualityElementEl.textContent = `${placement.Quality_And_Element} sign`;
 
-    for (let attribute of placement.Attributes){
+    for (let attribute of `Attributes: ${placement.Attributes}`){
         const attributeEl = document.createElement('li');
         attributeEl.textContent = attribute;
         attributesEl.append(attributeEl);
