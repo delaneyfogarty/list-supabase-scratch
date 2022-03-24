@@ -1,8 +1,16 @@
-// import functions and grab DOM elements
+import { fetchAllPlacements } from './fetch-utils.js';
+import { renderAllPlacements } from './render-utils.js';
 
-// let state
+const placementListEl = document.querySelector('.placement-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+window.addEventListener('load', async () => {
+    const placements = await fetchAllPlacements();
+
+    for (let placement of placements) {
+        const placementEl = renderAllPlacements(placement);
+
+        placementListEl.append(placementEl);
+    }
+});
+
